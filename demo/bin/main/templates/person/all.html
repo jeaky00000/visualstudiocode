@@ -6,19 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" />
 </head>
 
 <body>
-    <div style="border-radius: 2px; border:solid 1px #ddd;">
-        user name: <span th:text="${user_name}"></span> </br>
-        age:
+    <div class="container">
+        <div class="alert-primary">
+            user name: <span th:text="${user_name}"></span> </br>
+            age: <span th:text="${age}"></span>
+        </div>
+
+        <ul>
+            <li th:each="user: ${user_list}">
+                <span th:text=${user}></span>
+            </li>
+        </ul>
     </div>
 
-    <ul>
-        <li th:each="user: ${user_list}">
-            <span th:text=${user}></span>
-        </li>
-    </ul>
 </body>
 
 </html>

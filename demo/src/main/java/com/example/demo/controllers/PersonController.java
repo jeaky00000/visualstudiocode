@@ -17,7 +17,7 @@ public class PersonController{
     @GetMapping("all")
     public String findAllPerson(Model model){
         model.addAttribute("user_name", "jiang  yanping");
-
+        model.addAttribute("age", 30);
         List user_list = Arrays.asList("zhai", "zhang", "chen", "liu");
         model.addAttribute("user_list", user_list);
 
