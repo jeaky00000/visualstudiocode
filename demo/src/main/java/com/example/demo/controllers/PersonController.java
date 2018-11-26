@@ -41,4 +41,14 @@ public class PersonController {
        
         return users;
     }
+
+    @GetMapping("add")
+    @ResponseBody
+    public String add(){
+        User user = new User("chen");
+        respository.save(user);
+    
+        return "ok";
+    }
+
 }
