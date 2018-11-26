@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -18,11 +18,15 @@
 
         <ul>
             <li th:each="user: ${user_list}">
-                <span th:text=${user}></span>
+                <span class="badge-info" th:text=${user}></span>
             </li>
         </ul>
-    </div>
-
+        <div th:text="${param.user_name}"></div>
+        <div th:text="${#calendars.format(today,'yyyy-MM-dd')}"></div>
+        <div th:text="${#calendars.format(today,'dd MMMM yyyy')}">13 May 2011</div>
+        <div>
+            <a th:href="@{user/comments(id=1,name=5)}">hello</a>
+        </div>
 </body>
 
 </html>
