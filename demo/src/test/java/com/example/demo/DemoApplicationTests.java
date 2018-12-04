@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
@@ -29,12 +30,12 @@ public class DemoApplicationTests {
 
 	@Test
 	public void contextLoads() throws Exception {
+		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		for(int i= 0 ; i < 100; i++)
 		{
-			rabbitTemplate.convertAndSend("user_queue", "hello " + new Date());
-			Thread.sleep(1000);
+			rabbitTemplate.convertAndSend("user_queue", "hello " +  simpleDateFormat.format(new Date()));
+			Thread.sleep(100);
 		}
-			
 	}
 
 
