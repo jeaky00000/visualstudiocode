@@ -35,5 +35,7 @@ dependencies {
 	implementation('org.projectlombok:lombok:1.18.4')
 	implementation('com.alibaba:fastjson:1.2.51')
 	implementation('org.springframework.boot:spring-boot-starter-data-redis')
+	implementation('org.springframework.boot:spring-boot-starter-amqp')
+
 	testImplementation('org.springframework.boot:spring-boot-starter-test')
 }
