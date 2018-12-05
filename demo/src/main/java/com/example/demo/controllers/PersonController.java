@@ -3,10 +3,8 @@ package com.example.demo.controllers;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
 import com.example.demo.entities.User;
 import com.example.demo.repositories.UserRepository;
-
 import org.hibernate.annotations.SourceType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
