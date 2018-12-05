@@ -21,11 +21,15 @@ sourceCompatibility = 1.8
 
 repositories {
 	mavenCentral()
-	maven { url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+ 	maven { url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+	maven { url "http://repo.spring.io/release" }
+	maven { url "http://repo.spring.io/milestone" }
+	maven { url "http://repo.spring.io/snapshot" }
 }
 
 
 dependencies {
+
 	implementation('org.springframework.boot:spring-boot-starter-aop')
 	implementation('org.springframework.boot:spring-boot-starter-thymeleaf')
 	implementation('org.springframework.boot:spring-boot-starter-web')
@@ -37,5 +41,10 @@ dependencies {
 	implementation('org.springframework.boot:spring-boot-starter-data-redis')
 	implementation('org.springframework.boot:spring-boot-starter-amqp')
 	implementation('org.springframework.kafka:spring-kafka')
+	implementation('org.springframework.boot:spring-boot-devtools')
+	implementation('org.apache.shiro:shiro-spring:1.4.0')
+
 	testImplementation('org.springframework.boot:spring-boot-starter-test')
 }
+
+ 

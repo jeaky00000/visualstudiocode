@@ -1,12 +1,19 @@
-spring:
-  kafka:
-    bootstrap-servers: 192.168.49.130:9092
-    producer:
-      key-serializer: org.apache.kafka.common.serialization.StringSerializer
-      value-serializer: org.apache.kafka.common.serialization.StringSerializer
-    consumer:
-      group-id: test
-      enable-auto-commit: true
-      auto-commit-interval: 1000
-      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+# spring:
+#   kafka:
+#     bootstrap-servers: 192.168.49.130:9092
+#     producer:
+#       key-serializer: org.apache.kafka.common.serialization.StringSerializer
+#       value-serializer: org.apache.kafka.common.serialization.StringSerializer
+#     consumer:
+#       group-id: test
+#       enable-auto-commit: true
+#       auto-commit-interval: 1000
+#       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+#       value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      
+devtools:
+  livereload:
+    enabled: true #是否支持livereload
+    port: 35729
+  restart:
+    enabled: true #是否支持热部署
